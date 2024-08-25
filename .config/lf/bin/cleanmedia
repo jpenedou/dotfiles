@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# #clear
+# echo -en "\033[2J"
+#
+# start_row=$4
+# start_col=$5
+# zone_rows=$2
+# zone_cols=$3
+#
+# for ((row = start_row; row < start_row + zone_rows; row++)); do
+# 	tput cup $row $start_col
+# 	printf "%${zone_cols}s" "p"
+# done
+#
+# tput cup $start_row $start_col
+#
+if [[ $1 != $6 ]]; then
+	lf -remote "send $id redraw"
+fi

@@ -1,0 +1,26 @@
+set icons
+set dircounts
+set info size
+set sortby natural
+set hidden
+set mouse
+set previewer ~/.config/lf/bin/previewmedia.sh
+#set cleaner ~/.config/lf/bin/cleanmedia
+set cleaner ~/.config/lf/bin/kittyclean.sh
+set sixel
+
+map e &kitty nvim "$f"
+
+map p
+map pp paste
+map ph $~/.config/lf/bin/hardlinks "$fs"
+
+map gd cd ~/Desktop/
+map ge ${{
+  explorer.exe .
+  exit 0
+}}
+
+map R redraw
+
+map zp set preview!

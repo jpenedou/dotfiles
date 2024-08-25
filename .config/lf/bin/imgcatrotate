@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+if ! [ -f "$1" ]; then
+	exit 1
+fi
+
+cache="$HOME/.cache/imgcat"
+
+mkdir -p "$cache"
+
+file_path="$1"
+rotation=$(identify -verbose $1 | grep -i "Orientation" | awk '{print $2}')
+# echo $rotation
+if [[ ! $rotation == *"Undefined"* ]]; then
+	oriented_file_name=$(basename "$file_path" | cut -d. -f1)
+	# echo $oriented_file_name
+	oriented_file_path="$cache/$oriented_file_name.oriented.${file_path##*.}"
+	echo $oriented_file_path
+	convert -- $file_path -auto-orient $oriented_file_path
+	imgcat $oriented_file_path
+	rm $oriented_file_path
+else
+	# echo "Sin rotación"
+	# imgcat -W $2 $file_path
+	imgcat $file_path
+fi

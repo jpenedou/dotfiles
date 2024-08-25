@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# Verificar si se proporciona al menos un argumento
+if [ "$#" -lt 1 ]; then
+	echo "Usage: $0 <path_list_string>"
+	exit 1
+fi
+
+# Obtener la cadena de rutas del primer parámetro
+path_list_string="$1"
+
+# Crear enlaces duros en el directorio actual para cada ruta en la cadena
+while IFS= read -r path; do
+	# Verificar si el path es un archivo válido
+	if [ -e "$path" ]; then
+		# Obtener el nombre del archivo sin la ruta
+		filename=$(basename "$path")
+
+		# Crear un enlace duro en el directorio actual
+		ln "$path" "$filename"
+
+		echo "Enlace duro creado para $path en $filename"
+	else
+		echo "El path $path no es un archivo válido."
+	fi
+done <<<"$path_list_string"
