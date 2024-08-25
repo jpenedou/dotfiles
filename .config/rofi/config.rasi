@@ -1,0 +1,52 @@
+/* ---- Configuration ---- */
+configuration {
+    modi:                       "drun,run";
+    font:                       "Fira Sans Bold 12";
+    show-icons:                 true;
+    icon-theme:                 "kora";
+    display-drun:               "APPS";
+    display-run:                "RUN";
+    display-filebrowser:        "FILES";
+    display-window:             "WINDOW";
+    drun-display-format:        "{name}";
+    hover-select:               true;
+    me-select-entry:            "";
+    me-accept-entry:            "MousePrimary";
+    window-format:              "{w} · {c} · {t}";
+}
+
+/* Themes en https://github.com/newmanls/rofi-themes-collection */
+@theme "/home/japenedo/.local/share/rofi/themes/simple-tokyonight.rasi"
+
+/* ---- Window ---- */
+window {
+    width:                        900px;
+/*
+    # x-offset:                     0px;
+    # y-offset:                     0px;
+    # spacing:                      0px;
+    # padding:                      0px;
+    # margin:                       0px; 
+    # color:                        #FFFFFF;
+    # border:                       2px;
+    # border-color:                 #AD8AE5;
+    # cursor:                       "default";
+    # transparency:                 "real";
+*/
+    location:                     center;
+/*
+    # anchor:                       center;
+    # fullscreen:                   false;
+    # enabled:                      true;
+    # border-radius:                10px;
+    # background-color:             transparent;
+*/
+}
+
+* {
+  font:   "Fira Sans Bold 12";
+}
+
+element-icon {
+  size: 1.5em;
+}
