@@ -1,0 +1,269 @@
+* {
+    font-family: "Fira Sans Semibold", FontAwesome, Roboto, Helvetica, Arial, sans-serif;
+    border: none;
+    border-radius: 0px;
+}
+
+window#waybar {
+    background-color: rgba(0,0,0,0.8);
+    border-bottom: 0px solid #ffffff;
+    /* color: #FFFFFF; */
+    background: transparent;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces {
+    background: #333333;
+    margin: 2px 1px 3px 1px;
+    padding: 0px 1px;
+    border-radius: 15px;
+    border: 0px;
+    font-weight: bold;
+    font-style: normal;
+    opacity: 0.8;
+    font-size: 16px;
+    color: @textcolor1;
+}
+
+#workspaces button {
+    padding: 0px 5px;
+    margin: 4px 3px;
+    border-radius: 15px;
+    border: 0px;
+    color: @textcolor1;
+    background-color: #222436;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.4;
+}
+
+#workspaces button.active {
+    color: @textcolor1;
+    background: #AD8AE5;
+    border-radius: 15px;
+    min-width: 40px;
+    transition: all 0.3s ease-in-out;
+    opacity: 1.0;
+}
+
+#workspaces button:hover {
+    color: @textcolor1;
+    background: #AD8AE5;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+#workspaces button.hosting-monitor {
+  background: #AD8AE5
+}
+
+tooltip {
+    border-radius: 10px;
+    background-color: #000000;
+    opacity:0.9;
+    padding:20px;
+    margin:0px;
+}
+
+tooltip label {
+    color: @textcolor2;
+}
+
+#window {
+    background: @backgroundlight;
+    margin: 5px 15px 5px 0px;
+    padding: 2px 10px 0px 10px;
+    border-radius: 12px;
+    color:@textcolor2;
+    font-size:16px;
+    font-weight:normal;
+    opacity:0.8;
+}
+
+window#waybar.empty #window {
+    background-color:transparent;
+}
+
+#taskbar {
+    background: @backgroundlight;
+    margin: 3px 15px 3px 0px;
+    padding:0px;
+    border-radius: 15px;
+    font-weight: normal;
+    font-style: normal;
+    opacity:0.8;
+    /* border: 3px solid @backgroundlight; */
+}
+
+#taskbar button {
+    margin:0;
+    border-radius: 15px;
+    padding: 0px 5px 0px 5px;
+    border-bottom: 2px solid #333333;
+}
+
+#taskbar button.active {
+  border-bottom: 2px solid #AD8AE5;
+}
+
+.modules-left > widget:first-child > #workspaces {
+    margin-left: 0;
+}
+
+.modules-right > widget:last-child > #workspaces {
+    margin-right: 0;
+}
+
+#clock {
+    background-color: @backgrounddark;
+    font-size: 16px;
+    color: @textcolor1;
+    border-radius: 15px;
+    padding: 1px 5px 0px 5px;
+    /* margin: 3px 0px 3px 0px; */
+    opacity:0.8;
+    /* border:3px solid @bordercolor;    */
+}
+
+#group-pulseaudio {
+  margin: 5px 0px 5px 5px;
+}
+
+#pulseaudio {
+    background-color: @backgroundlight;
+    font-size: 16px;
+    color: @textcolor2;
+    border-radius: 15px;
+    /* padding: 2px 10px 0px 10px; */
+    /* margin: 5px 15px 5px 0px; */
+    /* margin: 5px 0px 5px 5px; */
+    /* opacity:0.8; */
+}
+
+#pulseaudio.muted {
+    background-color: @backgrounddark;
+    color: @textcolor1;
+}
+
+#pulseaudio-slider slider {
+    /* margin: 10px 0px 5px 0px; */
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 10px;
+    min-width: 100px;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 100;
+}
+
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: #AD8AE5;
+}
+
+#network {
+    background-color: @backgroundlight;
+    font-size: 16px;
+    color: @textcolor2;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 5px 15px 5px 0px;
+    opacity:0.8;
+}
+
+#network.ethernet {
+    background-color: @backgroundlight;
+    color: @textcolor2;
+}
+
+#network.wifi {
+    background-color: @backgroundlight;
+    color: @textcolor2;
+}
+
+#bluetooth, #bluetooth.on, #bluetooth.connected {
+    background-color: @backgroundlight;
+    font-size: 16px;
+    color: @textcolor2;
+    border-radius: 15px;
+    padding: 2px 10px 0px 10px;
+    margin: 5px 15px 5px 0px;
+    opacity:0.8;
+}
+
+#bluetooth.off {
+    background-color: transparent;
+    padding: 0px;
+    margin: 0px;
+}
+
+#mpris {
+  margin: 5px 15px 5px 5px;
+  /* padding: 5px 15px 5px 5px; */
+  font-size: 15px;
+  color:@textcolor2;
+}
+
+#keyboard-state {
+  margin: 5px 5px 2px 15px;
+  font-size: 18px
+}
+
+#keyboard-state label.locked {
+  color: red
+}
+
+#tray {
+    margin: 5px 5px 10px 5px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#custom-notification {
+    margin: 5px 15px 10px 5px;
+    font-family: "NotoSansMono Nerd Font";
+    font-size: 15px;
+}
+
+#custom-exit {
+    margin: 5px 15px 10px 0px;
+    padding: 0px;
+    font-size: 18px;
+    color: @iconcolor;
+}
+
+#custom-switcher {
+  font-family: "NotoSansMono Nerd Font";
+  font-size: 24px;
+  color: @iconcolor;
+}
+
+#custom-workspaceplus {
+  /* font-family: "NotoSansMono Nerd Font"; */
+  font-size: 15px;
+  color: @iconcolor;
+  padding: 0px 5px;
+  margin: 4px 3px;
+  border-radius: 15px;
+  border: 0px;
+  background-color: #333333;
+  opacity: 0.8;
+}
+
+#battery {
+  margin: 5px 15px 5px 5px;
+  border-radius: 15px;
+  font-size: 16px;
+  color: @iconcolor;
+}

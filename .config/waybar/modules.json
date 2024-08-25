@@ -1,0 +1,210 @@
+{
+  // Workspaces
+  "hyprland/workspaces": {
+    "on-click": "activate",
+    "active-only": false,
+    "all-outputs": true,
+    "show-special": true,
+    "sort-by": "id",
+    "format": "{name}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+  },
+  // Taskbar
+  "wlr/taskbar": {
+    "format": "{icon} {name}",
+    "icon-size": 22,
+    "tooltip-format": "{title}",
+    "on-click": "activate",
+    "on-click-middle": "close",
+    "ignore-list": [],
+    "app_ids-mapping": {
+      "firefoxdeveloperedition": "firefox-developer-edition",
+      "terminal64.exe": "OANDA TMS MT5 Terminal"
+    },
+    "rewrite": {
+      "Firefox Web Browser": "Firefox",
+      ".*MetaTrader.*": " MetaTrader 5"
+    }
+  },
+  // Cliphist
+  "custom/cliphist": {
+    "format": "",
+    "on-click": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh",
+    "on-click-right": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh d",
+    "on-click-middle": "sleep 0.1 && ~/dotfiles/scripts/cliphist.sh w",
+    "tooltip": false
+  },
+  // Power Menu
+  "custom/exit": {
+    "format": "",
+    "on-click": "wlogout",
+    "tooltip": false,
+    "escape": true
+  },
+  "battery": {
+    "bat": "BAT0",
+    "interval": 60,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{capacity}% {icon}",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "max-length": 25
+  },
+  // System tray
+  "tray": {
+    "icon-size": 21,
+    "spacing": 10,
+    "show-passive-items": true
+  },
+  // Clock
+  "clock": {
+    "format": " {:%H:%M}",
+    "format-alt": "{:%A, %d de %B %Y - %R}",
+    "tooltip-format": "<tt><span size='11pt'>{calendar}</span></tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 3,
+      "weeks-pos": "",
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "format": {
+        "months": "<span color='#ffead3'><b>{}</b></span>",
+        "days": "<span color='#ecc6d9'><b>{}</b></span>",
+        "weeks": "<span color='#99ffdd'><b>W{}</b></span>",
+        "weekdays": "<span color='#ffcc66'><b>{}</b></span>",
+        "today": "<span color='#ff6699'><b><u>{}</u></b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down"
+    }
+  },
+  "group/pulseaudio": {
+    "orientation": "horizontal",
+    "modules": [
+      "pulseaudio",
+      "pulseaudio/slider"
+    ],
+    "drawer": {
+      "transition-duration": 300,
+      "children-class": "drawer-child",
+      "transition-left-to-right": false
+    }
+  },
+  // Pulseaudio
+  "pulseaudio": {
+    // "scroll-step": 1, // %, can be a float
+    "format": "{icon}  {volume}%",
+    "format-bluetooth": "{volume}% {icon}",
+    "format-bluetooth-muted": " {icon}",
+    "format-muted": " ",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        " ",
+        " "
+      ]
+    },
+    "on-click": "pavucontrol",
+    "on-click-middle": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+  },
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+  "mpris": {
+    "format": "{player} {player_icon} {position}/{length}",
+    "format-paused": "{player} {status_icon} {position}/{length}",
+    "player-icons": {
+      "default": " 󰝚 ",
+      "mpv": " 󰝚 ",
+      "chromium": " 󰝚 "
+    },
+    "status-icons": {
+      "paused": " 󰝛 "
+    },
+    "dynamic-len": 60
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  },
+  "keyboard-state": {
+    "numlock": false,
+    "capslock": true,
+    "format": "{icon}",
+    "format-icons": {
+      "locked": "🗚",
+      "unlocked": "🗚"
+    }
+  },
+  "custom/switcher": {
+    "format": "",
+    "tooltip": false,
+    "min-length": 3,
+    "on-click": "pkill rofi || rofi -i -show drun",
+    "on-click-right": "pkill rofi || rofi -i -show window",
+    "on-click-middle": "~/.config/hypr/scripts/hyprland-empty-workspace.sh"
+  },
+  "custom/workspaceplus": {
+    "format": "",
+    "tooltip": false,
+    "min-length": 2,
+    "on-click": "~/.config/hypr/scripts/hyprland-empty-workspace.sh"
+  },
+  //  "custom/moveworkspaceleft": {
+  //    "format": "",
+  //    "tooltip": false,
+  //    "min-length": 2,
+  //    "on-click": "~/.config/hypr/scripts/hyprland-move-workspace.sh l"
+  //  },
+  //  "custom/moveworkspaceright": {
+  //    "format": "",
+  //    "tooltip": false,
+  //    "min-length": 2,
+  //    "on-click": "~/.config/hypr/scripts/hyprland-move-workspace.sh r"
+  //  }
+}
