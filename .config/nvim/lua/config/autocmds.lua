@@ -1,0 +1,13 @@
+-- Autocmds are automatically loaded on the VeryLazy event
+-- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+-- Add any additional autocmds here
+
+-- Se modifica el autocmd que se añade en la configuración por defecto
+-- vim.api.nvim_create_autocmd("User", {
+--   pattern = "LazyVimKeymaps",
+--   callback = function()
+--     vim.keymap.set("n", "<leader><space>", "<Nop>")
+--     -- vim.keymap.set("n", "<leader>/", [[<cmd>call VSCodeNotify('workbench.action.findInFiles')<cr>]])
+--     -- vim.keymap.set("n", "<leader>ss", [[<cmd>call VSCodeNotify('workbench.action.gotoSymbol')<cr>]])
+--   end,
+-- })
