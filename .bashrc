@@ -30,7 +30,10 @@ alias matrix='cmatrix'
 alias yu='yay -Syu'
 alias yc='packages_to_delete=$(yay -Qdtq);  if [ -z "$packages_to_delete" ]; then echo "Nada que eliminar"; else echo $packages_to_delete; read -p "Eliminar paquetes? (S/N)" choice; if [[ "$choice" == [yYsS] ]]; then yay -Rsn $packages_to_delete; fi; fi'
 alias ys='yay -Ss'
+alias yi='yay -S'
 alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias lg='/usr/bin/lazygit'
+alias lgd='/usr/bin/lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # -----------------------------------------------------
 # GIT
