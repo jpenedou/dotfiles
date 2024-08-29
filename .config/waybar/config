@@ -23,7 +23,8 @@
 
     // Modules Center
     "modules-center": [
-      "clock"
+      "clock",
+      "battery",
     ],
 
     // Modules Right    
@@ -32,7 +33,6 @@
       "group/pulseaudio",
       "keyboard-state",
       "tray",
-      "battery",
       "custom/notification",
       "custom/exit",
     ]
