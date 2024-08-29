@@ -19,21 +19,22 @@ export EDITOR=nvim
 # Alias
 # -----------------------------------------------------
 
+alias bm='bashmount'
 alias c='clear'
-alias nf='neofetch'
-alias pf='pfetch'
+alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias ls='eza -a --icons'
 alias ll='eza -al --icons'
 alias lt='eza -a --tree --level=1 --icons'
-alias v='$EDITOR'
+alias lg='/usr/bin/lazygit'
+alias lgd='/usr/bin/lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias matrix='cmatrix'
+alias nf='neofetch'
+alias pf='pfetch'
+alias v='$EDITOR'
 alias yu='yay -Syu'
 alias yc='packages_to_delete=$(yay -Qdtq);  if [ -z "$packages_to_delete" ]; then echo "Nada que eliminar"; else echo $packages_to_delete; read -p "Eliminar paquetes? (S/N)" choice; if [[ "$choice" == [yYsS] ]]; then yay -Rsn $packages_to_delete; fi; fi'
 alias ys='yay -Ss'
 alias yi='yay -S'
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
-alias lg='/usr/bin/lazygit'
-alias lgd='/usr/bin/lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 
 # -----------------------------------------------------
 # GIT
