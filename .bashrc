@@ -35,6 +35,7 @@ alias yu='yay -Syu'
 alias yc='packages_to_delete=$(yay -Qdtq);  if [ -z "$packages_to_delete" ]; then echo "Nada que eliminar"; else echo $packages_to_delete; read -p "Eliminar paquetes? (S/N)" choice; if [[ "$choice" == [yYsS] ]]; then yay -Rsn $packages_to_delete; fi; fi'
 alias ys='yay -Ss'
 alias yi='yay -S'
+alias yz='yazi'
 
 # -----------------------------------------------------
 # GIT
@@ -65,4 +66,15 @@ fi
 lfcd() {
   # `command` is needed in case `lfcd` is aliased to `lf`
   cd "$(command lf -print-last-dir "$@")"
+}
+
+eval "$(zoxide init bash)"
+
+function yzd() {
+  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+  yazi "$@" --cwd-file="$tmp"
+  if cwd="$(cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+    builtin cd -- "$cwd"
+  fi
+  rm -f -- "$tmp"
 }
