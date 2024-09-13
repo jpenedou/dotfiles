@@ -1,6 +1,6 @@
 /* ---- Configuration ---- */
 configuration {
-    modi:                       "drun,run";
+    modi:                       "drun,run,window";
     font:                       "Fira Sans Bold 12";
     show-icons:                 true;
     icon-theme:                 "kora";
@@ -13,6 +13,7 @@ configuration {
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
+    kb-delete-entry:            "Alt+w";
 }
 
 /* Themes en https://github.com/newmanls/rofi-themes-collection */
