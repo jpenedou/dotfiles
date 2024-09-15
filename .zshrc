@@ -74,6 +74,7 @@ plugins=(
   git
   zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-bat
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -116,6 +117,7 @@ source /usr/share/fzf/completion.zsh
 export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git --ignore .cache/yay -l -g ""'
 export FZF_ALT_C_COMMAND='find -type d 2>/dev/null'
 export FZF_DEFAULT_OPTS='--height 80% --layout=reverse'
+export MANROFFOPT="-c" # Para bat, man fix
 
 # -----------------------------------------------------
 # Alias
