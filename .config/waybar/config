@@ -1,39 +1,36 @@
 {
-    // General Settings
-
-    "layer": "top",
-    "margin-top": 0,
-    "margin-bottom": 0,
-    "margin-left": 0,
-    "margin-right": 0,    
-    "spacing": 0,
-
-    // Load Modules
-    "include": ["~/.config/waybar/modules.json"],
-
-    // Modules Left
-    "modules-left": [
-      "custom/switcher",
-      "hyprland/workspaces",
-      //"custom/moveworkspaceleft",
-      //"custom/moveworkspaceright",
-      "custom/workspaceplus",
-      "hyprland/window",
-    ],
-
-    // Modules Center
-    "modules-center": [
-      "clock",
-      "battery",
-    ],
-
-    // Modules Right    
-    "modules-right": [
-      "mpris",
-      "group/pulseaudio",
-      "keyboard-state",
-      "tray",
-      "custom/notification",
-      "custom/exit",
-    ]
+  // General Settings
+  "layer": "top",
+  "margin-top": 0,
+  "margin-bottom": 0,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  // Load Modules
+  "include": [
+    "~/.config/waybar/modules.jsonc"
+  ],
+  // Modules Left
+  "modules-left": [
+    "custom/switcher",
+    "hyprland/workspaces",
+    //"custom/moveworkspaceleft",
+    //"custom/moveworkspaceright",
+    "custom/workspaceplus",
+    "hyprland/window"
+  ],
+  // Modules Center
+  "modules-center": [
+    "clock",
+    "battery"
+  ],
+  // Modules Right    
+  "modules-right": [
+    "mpris",
+    "group/pulseaudio",
+    "keyboard-state",
+    "tray",
+    "custom/notification",
+    "custom/exit"
+  ]
 }
