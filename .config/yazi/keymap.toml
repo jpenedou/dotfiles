@@ -1,0 +1,23 @@
+[[manager.prepend_keymap]]
+on   = "f"
+run  = "plugin jump-to-char"
+desc = "Jump to char"
+
+[[manager.prepend_keymap]]
+on   = "!"
+run  = 'shell "$SHELL" --block --confirm'
+desc = "Open shell here"# [[manager.prepend_keymap]]
+
+[[manager.prepend_keymap]]
+on   = "l"
+run  = "plugin --sync smart-enter"
+desc = "Enter the child directory, or open the file"
+
+# on   = "o"
+# run  = "plugin open-with-cmd --args=block"
+# desc = "Open with command in the terminal"
+#
+# [[manager.prepend_keymap]]
+# on   = "O"
+# run  = "plugin open-with-cmd"
+# desc = "Open with command"
