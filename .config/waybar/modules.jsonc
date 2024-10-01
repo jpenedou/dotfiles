@@ -156,13 +156,13 @@
     "tooltip": false,
     "format": "{icon}",
     "format-icons": {
-      "notification": "<span foreground='red'></span>",
+      "notification": "<span foreground='#AD8AE5'></span>",
       "none": "",
-      "dnd-notification": "<span foreground='red'></span>",
+      "dnd-notification": "<span foreground='#AD8AE5'></span>",
       "dnd-none": "",
-      "inhibited-notification": "<span foreground='red'></span>",
+      "inhibited-notification": "<span foreground='#AD8AE5'></span>",
       "inhibited-none": "",
-      "dnd-inhibited-notification": "<span foreground='red'></span>",
+      "dnd-inhibited-notification": "<span foreground='#AD8AE5'></span>",
       "dnd-inhibited-none": ""
     },
     "return-type": "json",
@@ -195,6 +195,17 @@
     "min-length": 2,
     "on-click": "~/.config/hypr/scripts/hyprland-empty-workspace.sh"
   },
+  "custom/pacman": {
+    // "format": "{icon}{}",
+    "format": "{icon} ", //Fix temporal https://github.com/savely-krasovsky/waybar-updates/issues/31
+    "return-type": "json",
+    "format-icons": {
+      "pending-updates": "󰭽",
+      "updated": "󱋌"
+    },
+    "exec-if": "which waybar-updates",
+    "exec": "waybar-updates -t '\t\t\t {total} packages pending \n\n{}'"
+  }
   //  "custom/moveworkspaceleft": {
   //    "format": "",
   //    "tooltip": false,

@@ -279,3 +279,27 @@ window#waybar.empty #window {
     color: @textcolor1;
     opacity: 0.85;
 }
+
+@keyframes blink-update {
+	to {
+		color: @textcolor1;
+	}
+}
+
+#custom-pacman {
+  margin: 5px 0px 8px 5px;
+  font-family: "NotoSansMono Nerd Font";
+  font-size: 22px;
+  opacity: 0.85;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+#custom-pacman.pending-updates {
+  margin: 5px 0px 8px 5px;
+	animation-name: blink-update;
+	animation-duration: 3s;
+  font-family: "NotoSansMono Nerd Font";
+  font-size: 22px;
+  color: #AD8AE5;
+}

@@ -29,6 +29,7 @@
     "mpris",
     "group/pulseaudio",
     "keyboard-state",
+    "custom/pacman",
     "tray",
     "custom/notification",
     "custom/exit"
