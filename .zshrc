@@ -117,6 +117,29 @@ source /usr/share/fzf/completion.zsh
 export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git --ignore .cache/yay -l -g ""'
 export FZF_ALT_C_COMMAND='find -type d 2>/dev/null'
 export FZF_DEFAULT_OPTS='--height 80% --layout=reverse'
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
+  --highlight-line \
+  --info=inline-right \
+  --ansi \
+  --layout=reverse \
+  --border=none
+  --color=bg+:#2d3f76 \
+  --color=bg:#1e2030 \
+  --color=border:#589ed7 \
+  --color=fg:#c8d3f5 \
+  --color=gutter:#1e2030 \
+  --color=header:#ff966c \
+  --color=hl+:#65bcff \
+  --color=hl:#65bcff \
+  --color=info:#545c7e \
+  --color=marker:#ff007c \
+  --color=pointer:#ff007c \
+  --color=prompt:#65bcff \
+  --color=query:#c8d3f5:regular \
+  --color=scrollbar:#589ed7 \
+  --color=separator:#ff966c \
+  --color=spinner:#ff007c \
+"
 export MANROFFOPT="-c" # Para bat, man fix
 
 # -----------------------------------------------------
