@@ -4,6 +4,11 @@ run  = "plugin jump-to-char"
 desc = "Jump to char"
 
 [[manager.prepend_keymap]]
+on   = "F"
+run  = "filter --smart"
+desc = "Jump to char"
+
+[[manager.prepend_keymap]]
 on   = "!"
 run  = 'shell "$SHELL" --block --confirm'
 desc = "Open shell here"# [[manager.prepend_keymap]]
