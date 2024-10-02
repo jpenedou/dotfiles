@@ -204,7 +204,7 @@
       "updated": "󱋌"
     },
     "exec-if": "which waybar-updates",
-    "exec": "waybar-updates -t '\t\t\t {total} packages pending \n\n{}'"
+    "exec": "waybar-updates -t '{total} packages pending \n\n{}'"
   }
   //  "custom/moveworkspaceleft": {
   //    "format": "",
