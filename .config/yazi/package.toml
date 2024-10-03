@@ -1,5 +1,5 @@
 [plugin]
-deps = [{ use = "llanosrocas/yaziline", rev = "5886330" }, { use = "yazi-rs/plugins:jump-to-char", rev = "6c11a97" }, { use = "Ape/open-with-cmd", rev = "8d7abc8" }, { use = "AnirudhG07/rich-preview", rev = "9bcf154" }]
+deps = [{ use = "llanosrocas/yaziline", rev = "5886330" }, { use = "yazi-rs/plugins:jump-to-char", rev = "6c11a97" }, { use = "Ape/open-with-cmd", rev = "8d7abc8" }, { use = "AnirudhG07/rich-preview", rev = "9bcf154" }, { use = "dedukun/relative-motions", rev = "89d0cb9" }]
 
 [flavor]
 deps = []

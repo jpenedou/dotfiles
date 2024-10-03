@@ -14,3 +14,4 @@ end, 500, Status.RIGHT)
 
 require("zoxide"):setup({ update_db = true })
 require("yaziline"):setup()
+require("relative-motions"):setup({ show_numbers = "relative", show_motion = true })
