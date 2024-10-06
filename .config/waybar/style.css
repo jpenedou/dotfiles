@@ -241,6 +241,7 @@ window#waybar.empty #window {
   /* padding: 5px 15px 5px 5px; */
   font-size: 15px;
   color:@textcolor1;
+  opacity: 0.85;
 }
 
 #keyboard-state {
