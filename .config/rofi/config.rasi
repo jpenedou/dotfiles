@@ -13,7 +13,7 @@ configuration {
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
-    kb-delete-entry:            "Alt+w";
+    kb-delete-entry:            "Alt+BackSpace";
 }
 
 /* Themes en https://github.com/newmanls/rofi-themes-collection */
