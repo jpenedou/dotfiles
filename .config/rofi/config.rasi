@@ -14,6 +14,7 @@ configuration {
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
     kb-delete-entry:            "Alt+BackSpace";
+    kb-cancel:                  "Escape,MouseSecondary";
 }
 
 /* Themes en https://github.com/newmanls/rofi-themes-collection */
