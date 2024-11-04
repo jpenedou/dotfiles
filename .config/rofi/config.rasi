@@ -13,7 +13,7 @@ configuration {
     me-select-entry:            "";
     me-accept-entry:            "MousePrimary";
     window-format:              "{w} · {c} · {t}";
-    kb-delete-entry:            "Alt+BackSpace";
+    kb-delete-entry:            "Alt+BackSpace,MouseMiddle";
     kb-cancel:                  "Escape,MouseSecondary";
 }
 
