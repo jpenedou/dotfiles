@@ -19,3 +19,9 @@ prepend_previewers = [
     # { name = "*.json", run = "rich-preview"}, # for json (.json) files
 #    { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
 ]
+[[plugin.prepend_fetchers]]
+id   = "mime"
+if   = "!mime"
+name = "*"
+run  = "mime-ext"
+prio = "high"
