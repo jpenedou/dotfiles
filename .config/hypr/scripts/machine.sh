@@ -10,7 +10,7 @@ if [[ $chassis = "laptop" ]]; then
   hyprctl keyword bind CTRL, SUPER_R, exec, ~/.config/hypr/scripts/screenshot.sh
   hyprctl keyword monitor HDMI-A-1, disable
   hyprctl keyword monitor HDMI-A-2, disable
-  hyprctl dispatch workspace 1
+  hyprctl dispatch focusworkspaceoncurrentmonitor 1
 else
   # binds
   hyprctl keyword bind ", PRINT, exec, ~/.config/hypr/scripts/screenshot.sh"
