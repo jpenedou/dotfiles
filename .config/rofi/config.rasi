@@ -23,9 +23,9 @@ configuration {
 /* ---- Window ---- */
 window {
     width:                        900px;
-/*
-    # x-offset:                     0px;
-    # y-offset:                     0px;
+    x-offset:                     0px;
+    y-offset:                     0px;
+  /*
     # spacing:                      0px;
     # padding:                      0px;
     # margin:                       0px; 
@@ -34,9 +34,7 @@ window {
     # border-color:                 #AD8AE5;
     # cursor:                       "default";
     # transparency:                 "real";
-*/
-    location:                     center;
-/*
+    # location:                     center;
     # anchor:                       center;
     # fullscreen:                   false;
     # enabled:                      true;
