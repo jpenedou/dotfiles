@@ -39,18 +39,20 @@ window#waybar {
     border-radius: 15px;
     border: 0px;
     color: @textcolor1;
-    background-color: #222436;
+    background: #222436;
     transition: all 0.3s ease-in-out;
     opacity: 0.4;
 }
 
 #workspaces button.active {
-    color: @textcolor1;
-    background: #AD8AE5;
-    border-radius: 15px;
-    min-width: 40px;
-    transition: all 0.3s ease-in-out;
-    opacity: 1.0;
+  color: @textcolor1;
+  border-radius: 15px;
+  min-width: 40px;
+  transition: all 0.3s ease-in-out;
+}
+
+#workspaces button.visible.active.hosting-monitor {
+  opacity: 1;
 }
 
 #workspaces button:hover {
@@ -61,7 +63,11 @@ window#waybar {
 }
 
 #workspaces button.hosting-monitor {
-  background: #AD8AE5
+  background: #AD8AE5;
+}
+
+#workspaces button.special {
+  background: #FC0FFF;
 }
 
 #custom-workspaceplus {
