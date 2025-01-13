@@ -167,6 +167,17 @@ alias ys='yay -Ss'
 alias -g yi='yay -S'
 alias yz='yazi'
 
+acer() {
+    local param="$1"
+    if [[ -z "$param" ]]; then
+        echo "Por favor, proporciona un acestream-id."
+        return 1
+    fi
+    local url="http://127.0.0.1:6878/remote-control?autoplay=yes&content_id=${param}"
+    xdg-open "$url"
+}
+
+
 # -----------------------------------------------------
 # bindkey
 # -----------------------------------------------------
