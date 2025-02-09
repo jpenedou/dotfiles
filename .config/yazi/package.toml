@@ -1,5 +1,37 @@
-[plugin]
-deps = [{ use = "llanosrocas/yaziline", rev = "a9f8c92" }, { use = "yazi-rs/plugins:jump-to-char", rev = "7afba3a" }, { use = "Ape/open-with-cmd", rev = "a80d1cf" }, { use = "AnirudhG07/rich-preview", rev = "8be4d27" }, { use = "dedukun/relative-motions", rev = "df97039" }, { use = "yazi-rs/plugins:mime-ext", rev = "7afba3a" }, { use = "yazi-rs/plugins:smart-enter", rev = "7afba3a" }]
+[[plugin.deps]]
+use = "llanosrocas/yaziline"
+rev = "a9f8c92"
+hash = "d7de07a8c0be885eb080908ab0afd9af"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:jump-to-char"
+rev = "7afba3a"
+hash = "72c66a0b3d60f8377eb9db5e1d8b60b2"
+
+[[plugin.deps]]
+use = "Ape/open-with-cmd"
+rev = "a80d1cf"
+hash = "86e0312b01bc5762813c6c1d0517f073"
+
+[[plugin.deps]]
+use = "AnirudhG07/rich-preview"
+rev = "8be4d27"
+hash = "c9a3d0731e7d7340e2c6d6126b1f3aa3"
+
+[[plugin.deps]]
+use = "dedukun/relative-motions"
+rev = "df97039"
+hash = "395940d2b22941e0acb1232579c9d4cf"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:smart-enter"
+rev = "7afba3a"
+hash = "c1a2739e9ef2d837030ccb4267be3ed1"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:mime-ext"
+rev = "0725851"
+hash = "c2a66ced4677511da878e72698e5f798"
 
 [flavor]
 deps = []
