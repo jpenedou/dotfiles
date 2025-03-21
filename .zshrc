@@ -75,6 +75,9 @@ plugins=(
   zsh-syntax-highlighting
   zsh-autosuggestions
   zsh-bat
+  web-search
+  jsontools
+  auto-notify
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -209,3 +212,5 @@ eval "$(zoxide init bash)"
 if [[ $(tty) == *"pts"* ]]; then
   pfetch
 fi
+
+AUTO_NOTIFY_IGNORE+=(yazi)
