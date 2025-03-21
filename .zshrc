@@ -158,12 +158,12 @@ alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias ls='eza -a --icons'
 alias ll='eza -al --icons --hyperlink'
 alias lt='eza -a --tree --level=1 --icons'
-alias lg='/usr/bin/lazygit'
-alias lgd='/usr/bin/lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+alias lg='lazygit'
+alias lgd='lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias matrix='cmatrix'
 alias nf='neofetch'
 alias pf='pfetch'
-alias v='$EDITOR'
+alias v='nvim'
 alias yu='yay -Syu --combinedupgrade --noconfirm'
 alias yc='packages_to_delete=$(yay -Qdtq);  if [ -z "$packages_to_delete" ]; then echo "Nada que eliminar"; else echo $packages_to_delete; echo "Eliminar paquetes? (S/N)";read choice; if [[ "$choice" == [yYsS] ]]; then yay -Rsn $packages_to_delete; fi; fi'
 alias ys='yay -Ss'
@@ -213,4 +213,4 @@ if [[ $(tty) == *"pts"* ]]; then
   pfetch
 fi
 
-AUTO_NOTIFY_IGNORE+=(yazi)
+AUTO_NOTIFY_IGNORE+=("nvim" "yazi" "lazygit" "ping")
