@@ -207,7 +207,7 @@
     },
     "exec-if": "which waybar-updates",
     "exec": "waybar-updates -t '{total} packages pending \n\n{}'",
-    "on-click": "kitty zsh -i -c 'yay -Syu --combinedupgrade --noconfirm; echo \"Presiona Enter para cerrar...\"; read -n 1 '"
+    "on-click": "kitty zsh -i -c \"~/.config/hypr/scripts/system_update.zsh\""
   }
   //  "custom/moveworkspaceleft": {
   //    "format": "",
