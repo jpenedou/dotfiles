@@ -2,7 +2,7 @@
 
 mode="drun"
 
-if [ ! -z "$1" ]; then
+if [ -n "$1" ]; then
   mode=$1
 fi
 
