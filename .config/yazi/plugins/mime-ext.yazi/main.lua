@@ -1,4 +1,4 @@
---- @since 25.2.7
+--- @since 25.4.4
 
 local FILES = {
 	[".envrc"] = "text/plain",
@@ -1081,8 +1081,8 @@ function M:fetch(job)
 		if file.cha.len == 0 then
 			mime = "inode/empty"
 		else
-			mime = merged_files[(file.url:name() or ""):lower()]
-			mime = mime or merged_exts[(file.url:ext() or ""):lower()]
+			mime = merged_files[(file.url.name or ""):lower()]
+			mime = mime or merged_exts[(file.url.ext or ""):lower()]
 		end
 
 		if mime then
@@ -1096,7 +1096,7 @@ function M:fetch(job)
 	end
 
 	if next(updates) then
-		ya.manager_emit("update_mimes", { updates = updates })
+		ya.mgr_emit("update_mimes", { updates = updates })
 	end
 
 	if #unknown > 0 then
@@ -1113,7 +1113,7 @@ function M.fallback_builtin(job, unknown, state)
 	end
 
 	local result = require("mime"):fetch(ya.dict_merge(job, { files = unknown }))
-	for i, f in unknown do
+	for i, f in ipairs(unknown) do
 		if type(result) == "table" then
 			state[indices[f:hash()]] = result[i]
 		else
