@@ -14,7 +14,7 @@ end, 500, Status.RIGHT)
 
 require("zoxide"):setup({ update_db = true })
 require("yaziline"):setup()
-require("relative-motions"):setup({ show_numbers = "relative", show_motion = true })
+require("relative-motions"):setup({ show_numbers = "relative", show_motion = true, enter_mode = "first" })
 require("mime-ext"):setup({
 	-- Expand the existing filename database (lowercase), for example:
 	with_files = {
