@@ -214,3 +214,11 @@ if [[ $(tty) == *"pts"* ]]; then
 fi
 
 AUTO_NOTIFY_IGNORE+=("nvim" "yazi" "lazygit" "ping")
+
+# pnpm
+export PNPM_HOME="/home/japenedo/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
