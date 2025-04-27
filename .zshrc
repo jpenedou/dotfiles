@@ -207,7 +207,8 @@ function yzd() {
 }
 
 eval "$(starship init zsh)"
-eval "$(zoxide init bash)"
+eval "$(zoxide init zsh)"
+eval "$(atuin init zsh)"
 
 if [[ $(tty) == *"pts"* ]]; then
   pfetch
@@ -222,3 +223,4 @@ case ":$PATH:" in
   *) export PATH="$PNPM_HOME:$PATH" ;;
 esac
 # pnpm end
+
