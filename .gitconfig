@@ -18,6 +18,7 @@
 	directory = /mnt/mypassport/git/mt5-pepperstone
 	directory = /mnt/mypassport/git/mt5
 	directory = /usr/share/sddm/themes
+	directory = /mnt/mypassport/git/dotfileswin
 [core]
     pager = delta
 
