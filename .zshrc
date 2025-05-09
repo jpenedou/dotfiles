@@ -71,13 +71,17 @@ ZSH_CUSTOM=~/.config/oh-my-zsh
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
+  auto-notify
   git
-  zsh-syntax-highlighting
+  jsontools
+  kitty
+  ssh
+  starship
+  web-search
+  zoxide
   zsh-autosuggestions
   zsh-bat
-  web-search
-  jsontools
-  auto-notify
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -206,8 +210,6 @@ function yzd() {
   rm -f -- "$tmp"
 }
 
-eval "$(starship init zsh)"
-eval "$(zoxide init zsh)"
 eval "$(atuin init zsh)"
 
 if [[ $(tty) == *"pts"* ]]; then
