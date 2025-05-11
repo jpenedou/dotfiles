@@ -18,7 +18,7 @@ configuration {
 }
 
 /* Themes en https://github.com/newmanls/rofi-themes-collection */
-@theme "/home/japenedo/.local/share/rofi/themes/simple-tokyonight.rasi"
+@theme "~/.local/share/rofi/themes/simple-tokyonight.rasi"
 
 /* ---- Window ---- */
 window {
