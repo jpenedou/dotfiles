@@ -226,3 +226,25 @@ case ":$PATH:" in
 esac
 # pnpm end
 
+
+# Ruta del archivo que almacena la fecha de la última actualización de oh-my-zsh
+ZSH_UPDATE_FILE="$ZSH_CACHE_DIR/.zsh-update"
+
+ZSH_UPDATE_LOG="$ZSH_CACHE_DIR/.zsh-update-log"
+
+# Crear el log si no existe
+[[ ! -f $ZSH_UPDATE_LOG ]] && touch $ZSH_UPDATE_LOG
+
+# Obtener la fecha actual y la última fecha registrada en el log
+LAST_UPDATE=$(cat "$ZSH_UPDATE_FILE" 2>/dev/null || echo "0")
+LAST_LOGGED=$(cat "$ZSH_UPDATE_LOG")
+
+# Si hay una nueva actualización, ejecuta el comando para actualizar submodulos de git
+if [[ "$LAST_UPDATE" != "$LAST_LOGGED" ]]; then
+  echo "Oh My Zsh se ha actualizado. Actualizando custom plugins..."
+
+  dotfiles submodule update
+
+  # Actualiza el log para no ejecutar el comando varias veces
+  echo "$LAST_UPDATE" > "$ZSH_UPDATE_LOG"
+fi
