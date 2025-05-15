@@ -7,3 +7,6 @@
 [submodule ".config/oh-my-zsh/plugins/zsh-bat"]
 	path = .config/oh-my-zsh/plugins/zsh-bat
 	url = https://github.com/fdellwing/zsh-bat.git
+[submodule ".oh-my-zsh"]
+	path = .oh-my-zsh
+	url = https://github.com/ohmyzsh/ohmyzsh.git
