@@ -33,3 +33,4 @@ require("mime-ext"):setup({
 	-- then fallback to Yazi's preset `mime` plugin, which uses `file(1)`
 	fallback_file1 = false,
 })
+require("starship"):setup()
