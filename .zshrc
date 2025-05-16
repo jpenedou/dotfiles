@@ -243,7 +243,7 @@ LAST_LOGGED=$(cat "$ZSH_UPDATE_LOG")
 if [[ "$LAST_UPDATE" != "$LAST_LOGGED" ]]; then
   echo "Oh My Zsh se ha actualizado. Actualizando custom plugins..."
 
-  dotfiles submodule update
+  dotfiles submodule update --remote --recursive
 
   # Actualiza el log para no ejecutar el comando varias veces
   echo "$LAST_UPDATE" > "$ZSH_UPDATE_LOG"
