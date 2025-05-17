@@ -2,6 +2,10 @@
 
 Este repositorio contiene mis dotfiles personalizados que utilizo en mi entorno ArchLinux con Hyprland. Aquí se incluyen configuraciones para diversas herramientas y aplicaciones que utilizo a diario. Uso los temas de TokyoNight en la mayoría de herramientas.
 
+<p align="center">
+  <img src="demo.png" alt="demo" width="80%" />
+</p>
+
 ## Clonación del Repositorio
 
 Para clonar este repositorio correctamente, incluyendo los submódulos y configurándolo como un repositorio bare, sigue los siguientes pasos:
