@@ -18,11 +18,23 @@ prepend_previewers = [
     { name = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
     # { name = "*.json", run = "rich-preview"}, # for json (.json) files
     # { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
-    { name = "*.html", run = "rich-preview"}
+    { name = "*.html", run = "rich-preview"},
+    { mime = "application/*zip",            run = "ouch" },
+    { mime = "application/x-tar",           run = "ouch" },
+    { mime = "application/x-bzip2",         run = "ouch" },
+    { mime = "application/x-7z-compressed", run = "ouch" },
+    { mime = "application/x-rar",           run = "ouch" },
+    { mime = "application/x-xz",            run = "ouch" },
+    { mime = "application/xz",              run = "ouch" },
 ]
+
 [[plugin.prepend_fetchers]]
 id   = "mime"
 if   = "!mime"
 name = "*"
 run  = "mime-ext"
 prio = "high"
+
+[preview]
+max_width  = 1920
+max_height = 1080
