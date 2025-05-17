@@ -248,3 +248,10 @@ if [[ "$LAST_UPDATE" != "$LAST_LOGGED" ]]; then
   # Actualiza el log para no ejecutar el comando varias veces
   echo "$LAST_UPDATE" > "$ZSH_UPDATE_LOG"
 fi
+
+# Custom prompt for Yazi
+YAZI_TERM=""
+if [ -n "$YAZI_LEVEL" ]; then
+	YAZI_TERM="|  Yazi terminal: "
+fi
+PS1="$PS1$YAZI_TERM"
