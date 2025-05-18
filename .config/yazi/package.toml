@@ -5,7 +5,7 @@ hash = "a84a339953a568fee1d8beb63e6dca73"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "7112e91"
+rev = "55bf699"
 hash = "a670c03eb3760812e044a24f94cedc55"
 
 [[plugin.deps]]
@@ -15,22 +15,22 @@ hash = "86e0312b01bc5762813c6c1d0517f073"
 
 [[plugin.deps]]
 use = "AnirudhG07/rich-preview"
-rev = "2559e5f"
-hash = "c9a3d0731e7d7340e2c6d6126b1f3aa3"
+rev = "fdcf373"
+hash = "bd1737dd44b202f412122e6a3b378d4c"
 
 [[plugin.deps]]
 use = "dedukun/relative-motions"
-rev = "61ae795"
-hash = "65d576a76597aac2a428dc7ec0eda2ce"
+rev = "ce2e890"
+hash = "23915860e59348bf4166778bb0e606f7"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:smart-enter"
-rev = "7112e91"
+rev = "55bf699"
 hash = "7918aab6a71caf31b58411f789195677"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:mime-ext"
-rev = "7112e91"
+rev = "55bf699"
 hash = "5e24c167e9ae9a203a48f2a438b8c705"
 
 [[plugin.deps]]
