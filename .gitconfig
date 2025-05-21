@@ -19,6 +19,8 @@
 	directory = /mnt/mypassport/git/mt5
 	directory = /usr/share/sddm/themes
 	directory = /mnt/mypassport/git/dotfileswin
+	directory = /mnt/mypassport/git/obsidian/marine
+	directory = /mnt/mypassport/git/obsidian/jose
 [core]
     pager = delta
 
