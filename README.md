@@ -1,4 +1,4 @@
-# Dotfiles para ArchLinux con Hyprland
+# Dotfiles en ArchLinux y Hyprland
 
 Este repositorio contiene mis dotfiles personalizados que utilizo en mi entorno ArchLinux con Hyprland. Aquí se incluyen configuraciones para diversas herramientas y aplicaciones que utilizo a diario. Uso los temas de TokyoNight en la mayoría de herramientas.
 
@@ -6,45 +6,39 @@ Este repositorio contiene mis dotfiles personalizados que utilizo en mi entorno 
   <img src="demo.png" alt="demo" width="80%" />
 </p>
 
-## Clonación del Repositorio
+## Instalación
 
-Para clonar este repositorio correctamente, incluyendo los submódulos y configurándolo como un repositorio bare, sigue los siguientes pasos:
+Para clonar este repositorio correctamente sigue los siguientes pasos:
 
-1. Abre una terminal y navega al directorio de inicio:
+1. Clona el repositorio:
 
-```bash
-cd ~
-```
-
-2. Clona el repositorio de forma bare:
-
-```bash
+```shell
 git clone --bare https://github.com/jpenedou/dotfiles.git ~/.dotfiles
 ```
 
-3. Define el alias `dotfiles` para facilitar la gestión del repositorio:
+2. Define el alias `dotfiles` para facilitar la gestión del repositorio:
 
-```bash
+```shell
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 ```
 
-4. Evita sobrescribir archivos existentes:
+3. Evita sobrescribir archivos existentes:
 
-```bash
+```shell
 dotfiles checkout
 ```
 
-Si ves mensajes de error por archivos existentes, mueve esos archivos antes de continuar. Luego, ejecuta de nuevo el comando anterior.
+> ⚠️ **Aviso:** Si ves mensajes de error por archivos existentes, mueve esos archivos antes de continuar. Luego, ejecuta de nuevo el comando anterior. Si estás seguro puedes sobrescribir con --force
 
-5. Establece el repositorio para no mostrar archivos no rastreados:
+4. Establece el repositorio para no mostrar archivos no rastreados:
 
-```bash
+```shell
 dotfiles config --local status.showUntrackedFiles no
 ```
 
-6. Actualiza los submódulos:
+5. Actualiza los submódulos:
 
-```bash
+```shell
 dotfiles submodule update --init --recursive
 ```
 
@@ -64,4 +58,4 @@ dotfiles submodule update --init --recursive
 
 ---
 
-Para más detalles sobre cada herramienta y configuración específica, revisa los archivos correspondientes en este repositorio.
+> *Para más detalles sobre cada herramienta y configuración específica, revisa los archivos correspondientes en este repositorio. Algunas herramientas ya no se usan pero  se mantiene su configuración.*
