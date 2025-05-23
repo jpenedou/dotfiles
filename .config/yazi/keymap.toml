@@ -71,14 +71,18 @@ desc = "Move in relative steps"
 [[manager.prepend_keymap]]
 on   = [ "g", "i" ]
 run  = "plugin lazygit"
-desc = "run lazygit"
+desc = "Run lazygit"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "l" ]
+run  = "shell --block -- zsh -c 'source ~/.zshrc; lgd; clear'"
+desc = "Run lazygit in dotfiles"
 
 [[manager.prepend_keymap]]
 on = ["C"]
 run = "plugin ouch"
 desc = "Compress with ouch"
 
-# keymap.toml
 [[manager.prepend_keymap]]
 on   = "T"
 run  = "plugin toggle-pane max-preview"

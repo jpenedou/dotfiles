@@ -163,7 +163,6 @@ alias ls='eza -a --icons'
 alias ll='eza -al --icons --hyperlink'
 alias lt='eza -a --tree --level=1 --icons'
 alias lg='lazygit'
-alias lgd='lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
 alias matrix='cmatrix'
 alias nf='neofetch'
 alias pf='pfetch'
@@ -184,6 +183,9 @@ acer() {
     xdg-open "$url"
 }
 
+lgd() {
+  lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"
+}
 
 # -----------------------------------------------------
 # bindkey
