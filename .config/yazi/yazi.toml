@@ -8,7 +8,7 @@ prepend_rules = [
 	{ mime = "*pgp*", use = ["edit","reveal"] },
 ]
 
-[manager]
+[mgr]
 # linemode = "size"
 
 [plugin]
