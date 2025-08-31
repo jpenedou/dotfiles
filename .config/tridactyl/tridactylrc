@@ -1,1 +1,20 @@
+" General Settings
+set update.lastchecktime 1756630257756
+set update.nag true
+set update.nagwait 7
+set update.lastnaggedversion 1.14.0
+set update.checkintervalsecs 86400
+set configversion 2.0
+set theme default
 set editorcmd kitty nvim %f
+set searchurls.gmaps https://www.google.com/maps/search/%s
+set searchurls.ali https://www.aliexpress.com/wholesale?SearchText=%s
+set searchurls.amazon https://www.amazon.es/s?k=%s
+set searchurls.google https://www.google.com/search?q=
+set searchurls.scholar https://scholar.google.com/scholar?q=
+set searchurls.bing https://www.bing.com/search?q=
+set searchurls.duckduckgo https://duckduckgo.com/?q=
+set searchurls.youtube https://www.youtube.com/results?search_query=
+
+" For syntax highlighting see https://github.com/tridactyl/vim-tridactyl
+" vim: set filetype=tridactyl
