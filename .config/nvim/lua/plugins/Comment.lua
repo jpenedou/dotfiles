@@ -6,7 +6,7 @@ return {
     vscode = true,
   },
   {
-    "echasnovski/mini.comment",
+    "nvim-mini/mini.comment",
     enabled = true,
   },
 }
