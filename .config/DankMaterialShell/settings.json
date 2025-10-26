@@ -14,7 +14,7 @@
   "weatherLocation": "Sabarís, 36393",
   "weatherCoordinates": "42.1106958,-8.8191137",
   "useAutoLocation": false,
-  "weatherEnabled": true,
+  "weatherEnabled": false,
   "showLauncherButton": true,
   "showWorkspaceSwitcher": true,
   "showFocusedWindow": true,
@@ -57,17 +57,17 @@
       "width": 50
     },
     {
+      "id": "builtin_vpn",
+      "enabled": true,
+      "width": 50
+    },
+    {
       "id": "audioOutput",
       "enabled": true,
       "width": 50
     },
     {
       "id": "audioInput",
-      "enabled": true,
-      "width": 50
-    },
-    {
-      "id": "nightMode",
       "enabled": true,
       "width": 50
     },
@@ -102,23 +102,61 @@
     "focusedWindow"
   ],
   "dankBarCenterWidgets": [
-    "music",
-    "clock",
-    "weather"
+    {
+      "id": "music",
+      "enabled": true
+    },
+    {
+      "id": "clock",
+      "enabled": true
+    },
+    {
+      "id": "weather",
+      "enabled": true
+    }
   ],
   "dankBarRightWidgets": [
-    "systemTray",
-    "clipboard",
-    "cpuUsage",
-    "memUsage",
-    "notificationButton",
-    "battery",
-    "controlCenterButton"
+    {
+      "id": "notepadButton",
+      "enabled": true
+    },
+    {
+      "id": "systemTray",
+      "enabled": true
+    },
+    {
+      "id": "clipboard",
+      "enabled": true
+    },
+    {
+      "id": "cpuUsage",
+      "enabled": true
+    },
+    {
+      "id": "memUsage",
+      "enabled": true
+    },
+    {
+      "id": "notificationButton",
+      "enabled": true
+    },
+    {
+      "id": "battery",
+      "enabled": true
+    },
+    {
+      "id": "systemUpdate",
+      "enabled": true
+    },
+    {
+      "id": "controlCenterButton",
+      "enabled": true
+    }
   ],
   "appLauncherViewMode": "list",
   "spotlightModalViewMode": "list",
   "sortAppsAlphabetically": false,
-  "networkPreference": "auto",
+  "networkPreference": "wifi",
   "iconTheme": "System Default",
   "launcherLogoMode": "compositor",
   "launcherLogoCustomPath": "",
@@ -127,15 +165,15 @@
   "launcherLogoBrightness": 0.5,
   "launcherLogoContrast": 1,
   "launcherLogoSizeOffset": 0,
-  "fontFamily": "Inter Variable",
+  "fontFamily": "FiraCode Nerd Font",
   "monoFontFamily": "Fira Code",
-  "fontWeight": 400,
+  "fontWeight": 600,
   "fontScale": 1,
   "dankBarFontScale": 1,
   "notepadUseMonospace": true,
   "notepadFontFamily": "",
   "notepadFontSize": 14,
-  "notepadShowLineNumbers": false,
+  "notepadShowLineNumbers": true,
   "notepadTransparencyOverride": -1,
   "notepadLastCustomTransparency": 0.7,
   "soundsEnabled": true,
@@ -180,12 +218,14 @@
   "widgetBackgroundColor": "sch",
   "surfaceBase": "s",
   "wallpaperFillMode": "Fill",
+  "blurredWallpaperLayer": false,
+  "blurWallpaperOnOverview": false,
   "notificationTimeoutLow": 5000,
   "notificationTimeoutNormal": 5000,
   "notificationTimeoutCritical": 0,
   "notificationPopupPosition": 0,
   "osdAlwaysShowValue": false,
-  "powerActionConfirm": true,
+  "powerActionConfirm": false,
   "customPowerActionLock": "",
   "customPowerActionLogout": "",
   "customPowerActionSuspend": "",
