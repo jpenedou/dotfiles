@@ -48,7 +48,8 @@ dotfiles submodule update --init --recursive
 
 * **[Hyprland](https://hyprland.org/)**: Compositor dinámico para Wayland con soporte para tiling y floating windows.
 * **[Rofi](https://github.com/lbonn/rofi)**: Lanzador de aplicaciones, menú y selector de ventanas personalizable.
-* **[Waybar](https://github.com/Alexays/Waybar)**: Barra de estado y sistema personalizable para Wayland.
+* **[Waybar](https://github.com/Alexays/Waybar)**: Barra de estado y sistema personalizable para Wayland. (**Obsoleto**)
+* **[DMS (DankMaterialShell)](https://github.com/AvengeMedia/DankMaterialShell)**: Un completo shell de escritorio para niri, Hyprland, MangoWC, Sway y otros compositores Wayland.
 * **[Zsh + Oh My Zsh](https://ohmyz.sh/)**: Shell interactivo con mejoras sobre Bash y numerosas extensiones.
 * **[Atuin](https://github.com/ellie/atuin)**: Historial de shell avanzado con sincronización y búsqueda mejorada.
 * **[Kitty](https://sw.kovidgoyal.net/kitty/)**: Emulador de terminal GPU acelerado, rápido y altamente configurable.
