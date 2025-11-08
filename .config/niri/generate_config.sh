@@ -29,6 +29,7 @@ find "$CONFIG_DIR" -maxdepth 1 -type f -name "*.kdl" ! -name "config.kdl" | sort
     file_profile="${BASH_REMATCH[1]}"
     if [ "$file_profile" == "$PROFILE" ]; then
       echo "Añadiendo (específico de perfil): $filename"
+      echo "// From: $filename" >> "$OUTPUT_FILE"
       cat "$file" >> "$OUTPUT_FILE"
       echo -e "\n" >> "$OUTPUT_FILE"
     else
@@ -37,6 +38,7 @@ find "$CONFIG_DIR" -maxdepth 1 -type f -name "*.kdl" ! -name "config.kdl" | sort
   # Comprobar si es un fichero genérico (ej: 'binds.kdl')
   elif [[ "$filename" =~ \.kdl$ ]]; then
     echo "Añadiendo (genérico): $filename"
+    echo "// From: $filename" >> "$OUTPUT_FILE"
     cat "$file" >> "$OUTPUT_FILE"
     echo -e "\n" >> "$OUTPUT_FILE"
   fi
