@@ -18,7 +18,7 @@ binds {
     Mod+D hotkey-overlay-title="Run Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
     Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
-    
+ 
     Mod+Return hotkey-overlay-title="Open kitty" { spawn "kitty"; }
     Mod5+Return hotkey-overlay-title="Open kitty" { spawn "kitty"; }
     Mod+W hotkey-overlay-title="Open Firefox" { spawn "firefox"; }
@@ -68,8 +68,6 @@ binds {
     Mod+J     { focus-window-down; }
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
-    Mod5+Comma     { focus-column-left; }
-    Mod5+Period     { focus-column-right; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
@@ -124,6 +122,8 @@ binds {
     Mod+I              { focus-workspace-up; }
     Mod5+U              { focus-workspace-down; }
     Mod5+I              { focus-workspace-up; }
+    Mod5+Comma     { focus-workspace-down; }
+    Mod5+Period     { focus-workspace-up; }
     Mod+Ctrl+Page_Down { move-column-to-workspace-down; }
     Mod+Ctrl+Page_Up   { move-column-to-workspace-up; }
     Mod+Ctrl+U         { move-column-to-workspace-down; }
@@ -201,7 +201,10 @@ binds {
     // Mod+Ctrl+1 { move-window-to-workspace 1; }
 
     // Switches focus between the current and the previous workspace.
-    // Mod+Tab { focus-workspace-previous; }
+    Mod+Tab { focus-workspace-previous; }
+
+    Alt+Tab repeat=false { spawn "niriswitcherctl" "show" "--window"; }
+    Alt+Grave repeat=false { spawn "niriswitcherctl" "show" "--workspace"; }
 
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
