@@ -12,6 +12,11 @@ window-rule {
     open-maximized true
 }
 
+window-rule {
+    match app-id="firefox"
+    open-maximized true
+}
+
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
 window-rule {
