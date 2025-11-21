@@ -69,7 +69,11 @@ binds {
     Mod+K     { focus-window-up; }
     Mod+L     { focus-column-right; }
     Mod5+minus     { focus-column-right; }
+    Mod5+Shift+less     { focus-column-right; }
+    Mod+Shift+less     { focus-column-right; }
     Mod5+Shift+minus     { focus-column-left; }
+    Mod5+less     { focus-column-left; }
+    Mod+less     { focus-column-left; }
 
     Mod+Ctrl+Left  { move-column-left; }
     Mod+Ctrl+Down  { move-window-down; }
