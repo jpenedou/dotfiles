@@ -13,7 +13,6 @@
 
 spawn-sh-at-startup "dms run"
 spawn-at-startup "kitty"
-spawn-at-startup "niriswitcher"
 
 environment {
     QT_QPA_PLATFORM "wayland"
