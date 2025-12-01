@@ -131,7 +131,7 @@
   "dankBarRightWidgets": [
     {
       "id": "systemTray",
-      "enabled": false
+      "enabled": true
     },
     {
       "id": "clipboard",
@@ -163,7 +163,7 @@
   "useAutoLocation": false,
   "weatherEnabled": false,
   "networkPreference": "wifi",
-  "vpnLastConnected": "ebb4fda1-19b7-4b31-9620-28026690c5c2",
+  "vpnLastConnected": "d6c8143e-3aeb-4518-bc87-cefbbabe2f12",
   "iconTheme": "System Default",
   "launcherLogoMode": "compositor",
   "launcherLogoCustomPath": "",
