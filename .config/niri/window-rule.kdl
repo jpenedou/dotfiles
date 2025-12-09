@@ -49,3 +49,9 @@ window-rule {
     geometry-corner-radius 12
     clip-to-geometry true
 }
+
+// Open kitty centered and with 2/3 of the screen width.
+window-rule {
+    match app-id="kitty"
+    default-column-width { proportion 0.66667; }
+}
