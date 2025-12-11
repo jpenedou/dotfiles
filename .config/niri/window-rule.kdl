@@ -50,8 +50,8 @@ window-rule {
     clip-to-geometry true
 }
 
-// Open kitty centered and with 2/3 of the screen width.
+// Open kitty centered
 window-rule {
     match app-id="kitty"
-    default-column-width { proportion 0.66667; }
+    default-column-width { proportion 0.8; }
 }
