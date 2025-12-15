@@ -1,0 +1,3 @@
+#!/usr/bin/env zsh
+#fd -H -t d "$@"|fzf
+ag --hidden --ignore .git --ignore .cache/yay -l -g "" "$@" | fzf
