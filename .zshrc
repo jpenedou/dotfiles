@@ -158,7 +158,9 @@ alias acee='acestream-engine --client-console --log-stdout-level debug --log-deb
 alias acel='acestream-launcher -v -p "mpv" -e "acestream-engine --client-console --log-stdout-level debug --log-debug 355"'
 alias bm='bashmount'
 alias c='clear'
-alias dotfiles='/usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"'
+dotfiles() {
+    /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
+}
 alias ls='eza -a --icons'
 alias ll='eza -al --icons --hyperlink'
 alias lt='eza -a --tree --level=1 --icons'
