@@ -182,6 +182,12 @@ acer() {
         echo "Por favor, proporciona un acestream-id."
         return 1
     fi
+
+    # Check if param starts with acestream:// and remove the prefix
+    if [[ "$param" == acestream://* ]]; then
+        param="${param#acestream://}"
+    fi
+
     local url="http://127.0.0.1:6878/remote-control?autoplay=yes&content_id=${param}"
     xdg-open "$url"
 }
