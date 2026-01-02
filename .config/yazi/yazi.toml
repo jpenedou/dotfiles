@@ -9,24 +9,18 @@ prepend_rules = [
 ]
 
 [mgr]
-# linemode = "size"
+ratio = [1, 2, 3]
+linemode = "size"
 
 [plugin]
 prepend_previewers = [
     # { name = "*.csv", run = "rich-preview"}, # for csv files
-    { name = "*.md", run = "rich-preview" }, # for markdown (.md) files
-    { name = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
+    { url = "*.md", run = "rich-preview" }, # for markdown (.md) files
+    { url = "*.ipynb", run = "rich-preview"}, # for jupyter notebooks (.ipynb)
     # { name = "*.json", run = "rich-preview"}, # for json (.json) files
     # { name = "*.lang_type", run = "rich-preview"} # for particular language files eg. .py, .go., .lua, etc.
-    { name = "*.html", run = "rich-preview"},
+    { url = "*.html", run = "rich-preview"},
 ]
-
-[[plugin.prepend_fetchers]]
-id   = "mime"
-if   = "!mime"
-name = "*"
-run  = "mime-ext"
-prio = "high"
 
 [preview]
 max_width  = 1920
