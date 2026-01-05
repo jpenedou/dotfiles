@@ -22,6 +22,12 @@ prepend_previewers = [
     { url = "*.html", run = "rich-preview"},
 ]
 
+[[plugin.prepend_fetchers]]
+id   = "mime"
+url = "*"
+run  = "mime-ext"
+prio = "high"
+
 [preview]
 max_width  = 1920
 max_height = 1080
