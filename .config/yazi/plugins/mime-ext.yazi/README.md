@@ -17,8 +17,14 @@ Add this to your `~/.config/yazi/yazi.toml`:
 ```toml
 [[plugin.prepend_fetchers]]
 id   = "mime"
-url  = "*"
-run  = "mime-ext"
+url  = "local://*"
+run  = "mime-ext.local"
+prio = "high"
+
+[[plugin.prepend_fetchers]]
+id   = "mime"
+url  = "remote://*"
+run  = "mime-ext.remote"
 prio = "high"
 ```
 
@@ -27,7 +33,7 @@ prio = "high"
 You can also customize it in your `~/.config/yazi/init.lua` with:
 
 ```lua
-require("mime-ext"):setup {
+require("mime-ext.local"):setup {
 	-- Expand the existing filename database (lowercase), for example:
 	with_files = {
 		makefile = "text/makefile",
@@ -49,7 +55,7 @@ require("mime-ext"):setup {
 ## TODO
 
 - Add more file types (PRs welcome!).
-- Compress mime-type tables.
+- Compress MIME type tables.
 
 ## License
 
