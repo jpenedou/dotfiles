@@ -92,3 +92,13 @@ desc = "Maximize or restore the preview pane"
 on   = "z"
 run  = "plugin fazif agfzf"
 desc = "Search with ag and fzf"
+
+[[mgr.prepend_keymap]]
+on   = "H"
+run  = "tab_switch --relative -1"
+desc = "Go to previous tab"
+
+[[mgr.prepend_keymap]]
+on   = "L"
+run  = "tab_switch --relative +1"
+desc = "Go to next tab"
