@@ -7,7 +7,10 @@ set update.checkintervalsecs 86400
 set configversion 2.0
 set theme default
 set editorcmd kitty nvim %f
-set searchurls.gmaps https://www.google.com/maps/search/%s
+bind H tabnext
+bind L tabprev
+bind J back
+bind K forward
 set searchurls.ali https://www.aliexpress.com/wholesale?SearchText=%s
 set searchurls.amazon https://www.amazon.es/s?k=%s
 set searchurls.google https://www.google.com/search?q=
