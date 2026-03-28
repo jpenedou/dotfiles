@@ -6,4 +6,7 @@
 output "HDMI-A-1" {
     focus-at-startup
 }
+output "HDMI-A-2" {
+    off
+}
 
