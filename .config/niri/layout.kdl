@@ -21,7 +21,8 @@ layout {
         proportion 0.33333
         proportion 0.5
         proportion 0.66667
-
+        proportion 0.9
+        proportion 0.99999
         // Fixed sets the width in logical pixels exactly.
         // fixed 1920
     }
@@ -30,7 +31,7 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    default-column-width { proportion 0.99999; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
     // default-column-width {}
 
@@ -147,8 +148,8 @@ layout {
     // Top and bottom struts will simply add outer gaps in addition to the area occupied by
     // layer-shell panels and regular gaps.
     struts {
-        // left 64
-        // right 64
+        left 64
+        right 64
         // top 64
         // bottom 64
     }
