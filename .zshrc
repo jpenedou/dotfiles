@@ -175,6 +175,7 @@ alias yc='yay -Sc; yay -Yc'
 alias ys='yay -Ss'
 alias -g yi='yay -S'
 alias yz='yazi'
+alias zj='zellij'
 
 acer() {
     local param="$1"
