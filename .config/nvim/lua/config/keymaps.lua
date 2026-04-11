@@ -6,10 +6,10 @@
 -- vim.keymap.del("n", "<S-l>")
 
 -- Se cambia Shift por Alt para cambiar de buffer
--- if not vim.g.vscode then
---   vim.keymap.set("n", "<A-h>", "<cmd>bprevious<cr>")
---   vim.keymap.set("n", "<A-l>", "<cmd>bnext<cr>")
--- end
+if not vim.g.vscode then
+  vim.keymap.set("n", "<A-h>", "<cmd>bprevious<cr>")
+  vim.keymap.set("n", "<A-l>", "<cmd>bnext<cr>")
+end
 
 -- Con enter se desplaza la línea hacia abajo en modo normal
 -- vim.keymap.set("n", "<CR>", "O<ESC>j")
