@@ -1,6 +1,6 @@
 # mime-ext.yazi
 
-A mime-type provider based on a file extension database, replacing the [builtin `file(1)`](https://github.com/sxyazi/yazi/blob/main/yazi-plugin/preset/plugins/mime.lua) to speed up mime-type retrieval at the expense of accuracy.
+A MIME type provider based on a file extension database, replacing the [builtin `file(1)`](https://github.com/sxyazi/yazi/blob/main/yazi-plugin/preset/plugins/mime-local.lua) to speed up MIME type retrieval at the expense of accuracy.
 
 See https://yazi-rs.github.io/docs/tips#make-yazi-even-faster for more information.
 
@@ -16,16 +16,18 @@ Add this to your `~/.config/yazi/yazi.toml`:
 
 ```toml
 [[plugin.prepend_fetchers]]
-id   = "mime"
-url  = "local://*"
-run  = "mime-ext.local"
-prio = "high"
+id    = "mime" # Remove if Yazi > v26.1.22
+url   = "local://*"
+run   = "mime-ext.local"
+prio  = "high"
+group = "mime"
 
 [[plugin.prepend_fetchers]]
-id   = "mime"
-url  = "remote://*"
-run  = "mime-ext.remote"
-prio = "high"
+id    = "mime" # Remove if Yazi > v26.1.22
+url   = "remote://*"
+run   = "mime-ext.remote"
+prio  = "high"
+group = "mime"
 ```
 
 ## Advanced
@@ -46,8 +48,8 @@ require("mime-ext.local"):setup {
 		-- ...
 	},
 
-	-- If the mime-type is not in both filename and extension databases,
-	-- then fallback to Yazi's preset `mime` plugin, which uses `file(1)`
+	-- If the MIME type is not in both filename and extension databases,
+	-- then fallback to Yazi's preset `mime.local` plugin, which uses `file(1)`
 	fallback_file1 = false,
 }
 ```
