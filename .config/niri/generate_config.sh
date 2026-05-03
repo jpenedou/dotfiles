@@ -26,9 +26,17 @@ if ! command -v python3 &>/dev/null; then
   exit 1
 fi
 
+# Usar virtualenv local para kdl-py si no está disponible en el sistema
+VENV_DIR="$SCRIPT_DIR/.venv"
 if ! python3 -c "import kdl" &>/dev/null; then
-  echo "Error: módulo 'kdl-py' no instalado. Ejecuta: pip install kdl-py"
-  exit 1
+  if [ ! -d "$VENV_DIR" ]; then
+    echo "Creando virtualenv e instalando kdl-py..."
+    python3 -m venv "$VENV_DIR"
+    "$VENV_DIR/bin/pip" install --quiet kdl-py
+  fi
+  PYTHON="$VENV_DIR/bin/python3"
+else
+  PYTHON="python3"
 fi
 
 PROFILE=$1
@@ -55,7 +63,7 @@ merge_file() {
   local file="$1"
   local label="$2"
   echo "  → Fusionando: $label"
-  python3 "$MERGE_SCRIPT" "$OUTPUT_FILE" "$file"
+  $PYTHON "$MERGE_SCRIPT" "$OUTPUT_FILE" "$file"
 }
 
 # Procesa los archivos KDL de un directorio.
