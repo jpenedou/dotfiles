@@ -15,8 +15,8 @@ binds {
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
     // Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
-    Mod+D hotkey-overlay-title="Run Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
-    Mod+Space hotkey-overlay-title="Application Launcher" { spawn-sh "dms ipc call spotlight toggle"; }
+    Mod+D hotkey-overlay-title="Run Launcher" { spawn "dms" "ipc" "call" "spotlight" "toggle"; }
+    // Mod+Space gestionado por dms/binds.kdl
     Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
  
     Mod+Return hotkey-overlay-title="Open kitty" { spawn "kitty"; }
@@ -37,19 +37,7 @@ binds {
     // For example, this is a standard bind to toggle the screen reader (orca).
     Super+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
 
-    // Example volume keys mappings for PipeWire & WirePlumber.
-    // The allow-when-locked=true property makes them work even when the session is locked.
-    // Using spawn-sh allows to pass multiple arguments together with the command.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
-
-    // Example brightness key mappings for brightnessctl.
-    // You can use regular spawn with multiple arguments too (to avoid going through "sh"),
-    // but you need to manually put each argument in separate "" quotes.
-    XF86MonBrightnessUp allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "+10%"; }
-    XF86MonBrightnessDown allow-when-locked=true { spawn "brightnessctl" "--class=backlight" "set" "10%-"; }
+    // Audio y brillo gestionados por dms/binds.kdl
 
     // Open/close the Overview: a zoomed-out view of workspaces and windows.
     // You can also move the mouse into the top-left hot corner,
@@ -212,7 +200,7 @@ binds {
     // The following binds move the focused window in and out of a column.
     // If the window is alone, they will consume it into the nearby column to the side.
     // If the window is already in a column, they will expel it out.
-    Mod+Comma  { consume-or-expel-window-left; }
+    // Mod+Comma gestionado por dms/binds.kdl (Settings)
     Mod+Period { consume-or-expel-window-right; }
 
     // Consume one window from the right to the bottom of the focused column.
@@ -257,8 +245,9 @@ binds {
     Mod+Shift+Plus { set-window-height "+10%"; }
 
     // Move the focused window between the floating and the tiling layout.
-    Mod+V       { toggle-window-floating; }
-    Mod+Shift+V { switch-focus-between-floating-and-tiling; }
+    // Mod+V gestionado por dms/binds.kdl (Clipboard Manager)
+    Mod+Shift+V { toggle-window-floating; }
+    Mod+Shift+Alt+V { switch-focus-between-floating-and-tiling; }
 
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
@@ -291,7 +280,7 @@ binds {
 
     // The quit action will show a confirmation dialog to avoid accidental exits.
     Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
+    // Ctrl+Alt+Delete gestionado por dms/binds.kdl (Task Manager)
 
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.

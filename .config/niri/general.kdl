@@ -45,38 +45,6 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
 
-cursor {
-    xcursor-theme "Adwaita"
-    xcursor-size 24
-}
+// cursor extraído a cursor.kdl (dms/cursor.kdl lo gestiona automáticamente)
+// recent-windows extraído a recent-windows.kdl (dms/alttab.kdl lo gestiona automáticamente)
 
-recent-windows {
-    // off
-    debounce-ms 750
-
-    open-delay-ms 150
-
-    highlight {
-        active-color "#999999ff"
-        urgent-color "#ff9999ff"
-        padding 30
-        corner-radius 12
-    }
-
-    previews {
-        max-height 480
-        max-scale 0.5
-    }
-
-    binds {
-        Alt+Tab         { next-window; }
-        Alt+Shift+Tab   { previous-window; }
-        Alt+grave       { next-window     filter="app-id"; }
-        Alt+Shift+grave { previous-window filter="app-id"; }
-
-        // Mod+Tab         { next-window; }
-        // Mod+Shift+Tab   { previous-window; }
-        // Mod+grave       { next-window     filter="app-id"; }
-        // Mod+Shift+grave { previous-window filter="app-id"; }
-    }
-}
