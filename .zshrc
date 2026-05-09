@@ -123,13 +123,14 @@ source /usr/share/fzf/key-bindings.zsh
 source /usr/share/fzf/completion.zsh
 export FZF_CTRL_T_COMMAND='ag --hidden --ignore .git --ignore .cache/yay -l -g ""'
 export FZF_ALT_C_COMMAND='find -type d 2>/dev/null'
-export FZF_DEFAULT_OPTS='--height 80% --bind tab:down,shift-tab:up'
+export FZF_DEFAULT_OPTS='--height 80% --bind tab:down,shift-tab:up,alt-p:toggle-preview'
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --highlight-line \
   --info=inline-right \
   --ansi \
   --layout=reverse \
-  --border=none
+  --preview='if [ -d {} ]; then eza --icons --tree -L 2 {}; elif [[ {} == *.tar.gz || {} == *.tgz ]]; then tar -tvf {}; elif [[ {} == *.tar ]]; then tar -tvf {}; elif [[ {} == *.zip ]]; then unzip -l {}; elif [[ {} == *.7z ]]; then 7z l {}; elif [[ {} == *.gz ]]; then gunzip -c {}; elif [[ {} == *.xz ]]; then xz -d -c {}; elif [[ {} == *.bz2 ]]; then bzcat {}; else bat --style=auto --wrap=auto --color=always {} 2>/dev/null || cat {}; fi' \
+  --preview-window='right:60%' \
   --color=bg+:#2d3f76 \
   --color=bg:#1e2030 \
   --color=border:#589ed7 \
