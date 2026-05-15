@@ -29,6 +29,11 @@
 
 [delta]
     features = decorations
+    side-by-side = false
+    line-numbers = true
+    navigate = true
+    hyperlinks = true
+    wrap = true
 
 [delta "interactive"]
     keep-plus-minus-markers = false
@@ -43,3 +48,10 @@
     hunk-header-style = file line-number syntax
 [init]
 	defaultBranch = main
+[diff]
+	tool = nvimdiff
+	guitool = vscode
+[difftool]
+	prompt = false
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
