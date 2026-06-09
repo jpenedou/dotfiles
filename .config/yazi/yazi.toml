@@ -1,11 +1,15 @@
 [opener]
 edit = [
-	{ run = 'nvim "$@"', block = true, for = "unix" },
+	{ run = 'nvim "$@"', block = true, for = "unix", desc = "Open in nvim" },
+]
+bat = [
+	{ run = 'bat --paging=always "$@"', block = true, for = "unix", desc = "Open in bat" },
 ]
 
 [open]
 prepend_rules = [
 	{ mime = "*pgp*", use = ["edit","reveal"] },
+	{ mime = "text/*", use = ["edit", "bat", "reveal"] },
 ]
 
 [mgr]

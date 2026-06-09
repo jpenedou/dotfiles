@@ -58,5 +58,10 @@ use = "yazi-rs/plugins:yaziline"
 rev = "1db18bb"
 hash = "99aa06d3014798d86001c324468d497f"
 
+[[plugin.deps]]
+use = "tpsteiner/smart-pane"
+rev = "dbf06b1"
+hash = "cb0a6b19fd4dedbd9942d5a82108179f"
+
 [flavor]
 deps = []
