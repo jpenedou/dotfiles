@@ -3,10 +3,36 @@ on   = "e"
 run  = 'shell --block -- nvim $*'
 desc = "Edit with Nvim"
 
+# [[mgr.prepend_keymap]]
+# on   = "f"
+# run  = "plugin jump-to-char"
+# desc = "Jump to char"
+
+#
+# fchar [start|ext|word|all]
+#   start: f -> file
+#   ext:   f -> name.ext
+#   word:  f -> file, also-file
+#   all:   f -> file, also-file, twofile, elf
 [[mgr.prepend_keymap]]
 on   = "f"
-run  = "plugin jump-to-char"
-desc = "Jump to char"
+run  = "plugin fchar start"
+desc = "Jump to first char in filename"
+
+# [[mgr.prepend_keymap]]
+# on   = "e"
+# run  = "plugin fchar ext"
+# desc = "Jump to first char in extension"
+
+# [[mgr.prepend_keymap]]
+# on   = "F"
+# run  = "plugin fchar word"
+# desc = "Jump to first char in a word"
+
+[[mgr.prepend_keymap]]
+on   = "<C-f>"
+run  = "plugin fchar all"
+desc = "Jump to char anywhere in filename"
 
 [[mgr.prepend_keymap]]
 on   = "F"

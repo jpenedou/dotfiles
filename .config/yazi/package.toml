@@ -63,5 +63,10 @@ use = "tpsteiner/smart-pane"
 rev = "dbf06b1"
 hash = "cb0a6b19fd4dedbd9942d5a82108179f"
 
+[[plugin.deps]]
+use = "AminurAlam/yazi-plugins:fchar"
+rev = "6206bae"
+hash = "d024efb7bc95bcb912fe983fe0f39c7e"
+
 [flavor]
 deps = []
