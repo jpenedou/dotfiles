@@ -1,0 +1,17 @@
+{
+  "plugin": [
+    "@slkiser/opencode-quota",
+    "@tarquinen/opencode-dcp@latest",
+    "oh-my-opencode-slim"
+  ],
+  "$schema": "https://opencode.ai/config.json",
+  "agent": {
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "lsp": true
+}

@@ -1,0 +1,8 @@
+{
+  "plugin": [
+    "oh-my-openagent/tui",
+    "@slkiser/opencode-quota",
+    "@tarquinen/opencode-dcp@latest",
+    "oh-my-opencode-slim"
+  ]
+}
