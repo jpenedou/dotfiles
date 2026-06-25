@@ -268,3 +268,7 @@ if [ -n "$YAZI_LEVEL" ]; then
 	YAZI_TERM="|  Yazi terminal: "
 fi
 PS1="$PS1$YAZI_TERM"
+
+# >>> oh-my-opencode-slim background subagents >>>
+export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
+# <<< oh-my-opencode-slim background subagents <<<
