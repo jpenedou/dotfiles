@@ -1,6 +1,6 @@
-# Dotfiles en ArchLinux y Hyprland
+# Dotfiles — ArchLinux + Niri
 
-Este repositorio contiene mis dotfiles personalizados que utilizo en mi entorno ArchLinux con Hyprland. Aquí se incluyen configuraciones para diversas herramientas y aplicaciones que utilizo a diario. Uso los temas de TokyoNight en la mayoría de herramientas.
+Este repositorio contiene mis dotfiles personalizados para ArchLinux con el compositor Niri. Aquí se incluyen configuraciones para diversas herramientas y aplicaciones que utilizo a diario. Uso los temas de TokyoNight en la mayoría de herramientas.
 
 <p align="center">
   <img src="demo.png" alt="demo" width="80%" />
