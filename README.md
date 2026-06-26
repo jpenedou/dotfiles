@@ -44,6 +44,49 @@ dotfiles submodule update --init --recursive
 
 ---
 
+## Software Necesario
+
+Paquetes para una instalación desde cero en Arch Linux:
+
+### Compositor y escritorio
+```bash
+yay -S niri dms swaylock swaync wlogout grim slurp swayidle swappy niriswitcher xdg-desktop-portal xdg-desktop-portal-gtk
+```
+
+### Terminal, shell y prompt
+```bash
+yay -S kitty zsh starship atuin zoxide fzf eza bat
+```
+
+### Desarrollo
+```bash
+yay -S neovim lazygit yazi zellij git delta nodejs npm pnpm python python-pip make gcc jq ripgrep fd lazydocker glab
+```
+
+### Apps
+```bash
+yay -S firefox google-chrome mpv bottles ouch gnome-calculator pfetch
+```
+
+### Sistema
+```bash
+yay -S yay ccache bashmount networkmanager blueman libnotify imagemagick ffmpegthumbnailer ghostscript util-linux
+```
+
+### Fuentes
+```bash
+yay -S ttf-firacode-nerd
+```
+
+### OpenCode (plugin-based)
+```bash
+npm install -g @opencode-ai/opencode
+```
+
+LazyVim y sus plugins se instalan automáticamente al abrir Neovim por primera vez. Tridactyl se instala como extensión desde addons.mozilla.org.
+
+---
+
 ## Herramientas Utilizadas
 
 * **[Niri](https://github.com/YaLTeR/niri)**: Compositor Wayland scrollable-tiling. Reemplazó a Hyprland.
