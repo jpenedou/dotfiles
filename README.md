@@ -46,17 +46,19 @@ dotfiles submodule update --init --recursive
 
 ## Herramientas Utilizadas
 
-* **[Hyprland](https://hyprland.org/)**: Compositor dinámico para Wayland con soporte para tiling y floating windows.
-* **[Rofi](https://github.com/lbonn/rofi)**: Lanzador de aplicaciones, menú y selector de ventanas personalizable.
-* **[Waybar](https://github.com/Alexays/Waybar)**: Barra de estado y sistema personalizable para Wayland. (**Obsoleto**)
-* **[DMS (DankMaterialShell)](https://github.com/AvengeMedia/DankMaterialShell)**: Un completo shell de escritorio para niri, Hyprland, MangoWC, Sway y otros compositores Wayland.
-* **[Zsh + Oh My Zsh](https://ohmyz.sh/)**: Shell interactivo con mejoras sobre Bash y numerosas extensiones.
-* **[Atuin](https://github.com/ellie/atuin)**: Historial de shell avanzado con sincronización y búsqueda mejorada.
+* **[Niri](https://github.com/YaLTeR/niri)**: Compositor Wayland scrollable-tiling. Reemplazó a Hyprland.
+* **[DMS (DankMaterialShell)](https://github.com/AvengeMedia/DankMaterialShell)**: Shell de escritorio completo (launcher, clipboard, notificaciones, audio, brillo, lock screen, etc.).
 * **[Kitty](https://sw.kovidgoyal.net/kitty/)**: Emulador de terminal GPU acelerado, rápido y altamente configurable.
-* **[LazyVim](https://lazyvim.org/)**: Configuración avanzada para Neovim que facilita el uso de plugins y personalización.
+* **[Zsh + Oh My Zsh](https://ohmyz.sh/)**: Shell interactivo. Prompt con [Starship](https://starship.rs/), autosuggestions, syntax highlighting, y otras extensiones.
+* **[Neovim + LazyVim](https://lazyvim.org/)**: Editor de texto con configuración avanzada y ecosistema de plugins.
 * **[Yazi](https://github.com/sxyazi/yazi)**: Explorador de archivos rápido y minimalista basado en la línea de comandos.
-* **[Lazygit](https://github.com/jesseduffield/lazygit)**: Interfaz de usuario para Git en la terminal, simple y altamente funcional.
-
+* **[Lazygit](https://github.com/jesseduffield/lazygit)**: Interfaz TUI para Git, simple y altamente funcional.
+* **[Atuin](https://github.com/ellie/atuin)**: Historial de shell avanzado con sincronización y búsqueda mejorada.
+* **[fzf](https://github.com/junegunn/fzf)**: Fuzzy finder para búsqueda interactiva en terminal.
+* **[zoxide](https://github.com/ajeetdsouza/zoxide)**: Navegador de directorios inteligente que aprende de tu uso.
+* **[zellij](https://zellij.dev/)**: Multiplexor de terminal con layout workspace.
+* **[Tridactyl](https://tridactyl.xyz/)**: Extensión tipo Vim para Firefox (navegación, atajos, comandos).
+* **[OpenCode](https://opencode.ai/) + [oh-my-opencode-slim](https://github.com/opencode-ai/oh-my-opencode-slim)**: CLI de IA para desarrollo con agents. Plugins: [`@slkiser/opencode-quota`](https://github.com/slkiser/opencode-quota), [`@tarquinen/opencode-dcp`](https://github.com/Tarquinen/opencode-dynamic-context-pruning).
 ---
 
 > *Para más detalles sobre cada herramienta y configuración específica, revisa los archivos correspondientes en este repositorio. Algunas herramientas ya no se usan pero  se mantiene su configuración.*
