@@ -5,6 +5,29 @@
     "oh-my-opencode-slim"
   ],
   "$schema": "https://opencode.ai/config.json",
+  "experimental": {
+    "quotaToast": {
+      "enabled": true,
+      "enableToast": false,
+      "enabledProviders": "auto",
+      "formatStyle": "allWindows",
+      "percentDisplayMode": "remaining",
+      "showSessionTokens": true,
+      "tuiSidebarPanel": {
+        "enabled": false
+      },
+      "tuiCompactStatus": {
+        "enabled": false,
+        "homeBottom": false,
+        "sessionPrompt": false,
+        "suppressWhenNativeProviderQuota": true
+      },
+      "maintainerAnnouncements": {
+        "enabled": false,
+        "home": false
+      }
+    }
+  },
   "agent": {
     "explore": {
       "disable": true
