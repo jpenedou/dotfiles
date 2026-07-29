@@ -48,6 +48,8 @@
     hunk-header-style = file line-number syntax
 [init]
 	defaultBranch = main
+[credential "http://gitlab"]
+	helper = !/usr/bin/glab auth git-credential
 [diff]
 	tool = nvimdiff
 	guitool = vscode
