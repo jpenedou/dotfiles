@@ -1,7 +1,7 @@
 {
   "plugin": [
     "@slkiser/opencode-quota",
-    "@tarquinen/opencode-dcp@latest",
+    "@tarquinen/opencode-dcp",
     "oh-my-opencode-slim"
   ],
   "$schema": "https://opencode.ai/config.json",
