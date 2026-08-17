@@ -129,7 +129,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS \
   --info=inline-right \
   --ansi \
   --layout=reverse \
-  --preview='if [ -d {} ]; then eza --icons --tree -L 2 {}; elif [[ {} == *.tar.gz || {} == *.tgz ]]; then tar -tvf {}; elif [[ {} == *.tar ]]; then tar -tvf {}; elif [[ {} == *.zip ]]; then unzip -l {}; elif [[ {} == *.7z ]]; then 7z l {}; elif [[ {} == *.gz ]]; then gunzip -c {}; elif [[ {} == *.xz ]]; then xz -d -c {}; elif [[ {} == *.bz2 ]]; then bzcat {}; else bat --style=auto --wrap=auto --color=always {} 2>/dev/null || cat {}; fi' \
+  --preview='if [ -d {} ]; then eza --icons=auto --tree -L 2 {}; elif [[ {} == *.tar.gz || {} == *.tgz ]]; then tar -tvf {}; elif [[ {} == *.tar ]]; then tar -tvf {}; elif [[ {} == *.zip ]]; then unzip -l {}; elif [[ {} == *.7z ]]; then 7z l {}; elif [[ {} == *.gz ]]; then gunzip -c {}; elif [[ {} == *.xz ]]; then xz -d -c {}; elif [[ {} == *.bz2 ]]; then bzcat {}; else bat --style=auto --wrap=auto --color=always {} 2>/dev/null || cat {}; fi' \
   --preview-window='right:60%' \
   --color=bg+:#2d3f76 \
   --color=bg:#1e2030 \
@@ -162,14 +162,12 @@ alias c='clear'
 dotfiles() {
     /usr/bin/git --git-dir="$HOME/.dotfiles/" --work-tree="$HOME" "$@"
 }
-alias ls='eza -a --icons'
-alias ll='eza -al --icons --hyperlink'
-alias lt='eza -a --tree --level=1 --icons'
+alias ls='eza -a --icons=auto'
+alias ll='eza -al --icons=auto --hyperlink=auto'
+alias lt='eza -a --tree --level=1 --icons=auto'
 alias lg='lazygit'
 alias ldo='lazydocker'
 alias matrix='cmatrix'
-alias nf='neofetch'
-alias pf='pfetch'
 alias v='nvim'
 alias yu='yay -Syu --combinedupgrade --noconfirm'
 alias yc='yay -Sc; yay -Yc'
@@ -226,7 +224,7 @@ function yzd() {
 eval "$(atuin init zsh)"
 
 if [[ $(tty) == *"pts"* ]]; then
-  pfetch
+  fastfetch
 fi
 
 AUTO_NOTIFY_IGNORE+=("nvim" "yazi" "lazygit" "ping")
@@ -272,3 +270,6 @@ PS1="$PS1$YAZI_TERM"
 # >>> oh-my-opencode-slim background subagents >>>
 export OPENCODE_EXPERIMENTAL_BACKGROUND_SUBAGENTS=true
 # <<< oh-my-opencode-slim background subagents <<<
+
+# opencode
+export PATH=/home/japenedo/.opencode/bin:$PATH
