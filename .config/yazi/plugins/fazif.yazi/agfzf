@@ -1,3 +1,8 @@
 #!/usr/bin/env zsh
-#fd -H -t d "$@"|fzf
-ag --hidden --ignore .git --ignore .cache/yay -l -g "" "$@" | fzf
+# ag + fzf con preview ABAJO (down, 50%)
+ag --hidden --ignore .git --ignore .cache/yay -l -g "" "$@" | fzf \
+  --height 100% --layout reverse --border --info inline \
+  --preview 'if [ -d {} ]; then eza --color=always --icons -la {} 2>/dev/null || ls -lah --color=always {} 2>/dev/null | head -n 200; else bat --color=always --style=numbers --line-range=:500 {} 2>/dev/null || cat {} 2>/dev/null | head -n 500; fi' \
+  --preview-window 'down,50%,border-top' \
+  --bind 'ctrl-p:toggle-preview' \
+  --bind 'ctrl-/:change-preview-window(down,50%|right,50%|hidden)'
