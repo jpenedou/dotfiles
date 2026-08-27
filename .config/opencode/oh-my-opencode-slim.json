@@ -1,6 +1,6 @@
 {
   "$schema": "https://unpkg.com/oh-my-opencode-slim@latest/oh-my-opencode-slim.schema.json",
-  "preset": "openai",
+  "preset": "opencode-free",
   "multiplexer": {
     "type": "zellij",
     "layout": "main-vertical",
@@ -61,7 +61,7 @@
     },
     "opencode-free": {
       "orchestrator": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode/muse-spark-1.2-contributor-free",
         "variant": "medium",
         "skills": [
           "*"
@@ -72,8 +72,8 @@
         ]
       },
       "oracle": {
-        "model": "opencode/deepseek-v4-flash-free",
-        "variant": "medium",
+        "model": "opencode/x-preview-f-free",
+        "variant": "max",
         "skills": [
           "simplify"
         ],
@@ -81,7 +81,6 @@
       },
       "librarian": {
         "model": "opencode/mimo-v2.5-free",
-        "variant": "low",
         "skills": [],
         "mcps": [
           "websearch",
@@ -90,13 +89,12 @@
         ]
       },
       "explorer": {
-        "model": "opencode/north-mini-code-free",
-        "variant": "low",
+        "model": "opencode/nemotron-3.5-lightning-free",
         "skills": [],
         "mcps": []
       },
       "designer": {
-        "model": "opencode/nemotron-3-ultra-free",
+        "model": "opencode/x-preview-f-free",
         "variant": "low",
         "skills": [
           "agent-browser"
@@ -104,7 +102,7 @@
         "mcps": []
       },
       "fixer": {
-        "model": "opencode/deepseek-v4-flash-free",
+        "model": "opencode/hy3-free",
         "variant": "low",
         "skills": [],
         "mcps": []
