@@ -197,6 +197,21 @@ lgd() {
 }
 
 # -----------------------------------------------------
+# Marine VPN (Fortinet) vía openconnect + pass, sin llavero
+# Uso: marine-vpn   (la pass sale de `pass show Marine/VPN`)
+# -----------------------------------------------------
+marine-vpn() {
+  pass show Marine/VPN 2>/dev/null | head -n 1 | sudo openconnect \
+    --protocol=fortinet \
+    --user=jpenedo \
+    --passwd-on-stdin \
+    --servercert='pin-sha256:zTCXE/FIvHWkK00vOG0/GmTNJpbYRup56M6SD9yH/Hw=' \
+    --servercert='pin-sha256:0Fg/x7/S1QSXidEATrX7wBuTBDXPazr2wf50r3ZuU+k=' \
+    --servercert='pin-sha256:47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=' \
+    mafib01.globalmarine.es:10443
+}
+
+# -----------------------------------------------------
 # bindkey
 # -----------------------------------------------------
 bindkey '^ ' autosuggest-accept
