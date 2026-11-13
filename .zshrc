@@ -165,7 +165,7 @@ dotfiles() {
 alias ls='eza -a --icons=auto'
 alias ll='eza -al --icons=auto --hyperlink=auto'
 alias lt='eza -a --tree --level=1 --icons=auto'
-alias lg='lazygit'
+alias lz='lazygit'
 alias ldo='lazydocker'
 alias matrix='cmatrix'
 alias v='nvim'
@@ -192,7 +192,7 @@ acer() {
     xdg-open "$url"
 }
 
-lgd() {
+lzd() {
   lazygit --git-dir="$HOME/.dotfiles/" --work-tree="$HOME"
 }
 
