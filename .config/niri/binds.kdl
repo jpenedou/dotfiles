@@ -264,7 +264,7 @@ binds {
     // Mod+Shift+Space { switch-layout "prev"; }
 
     // Print { screenshot; }
-    Print { spawn-sh "grim -g \"$(slurp)\" - | swappy -f -"; }
+    Print { spawn-sh "dms screenshot --stdout | swappy -f -"; }
     Ctrl+Print { screenshot-screen; }
     Alt+Print { screenshot-window; }
 
