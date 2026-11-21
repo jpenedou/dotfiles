@@ -150,6 +150,6 @@ run  = "shell --block -- bat --paging=always %s"
 desc = "Open in bat"
 
 [[mgr.prepend_keymap]]
-on   = "<C-n>"
-run  = "shell -- dragon-drop -x -a -T %s"
+on   = "<A-d>"
+run  = "shell -- dragon-drop -a -T %s"
 desc = "Arrastrar archivos con Dragon"
