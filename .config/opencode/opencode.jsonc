@@ -1,8 +1,16 @@
 {
-  "plugin": [
-    "@slkiser/opencode-quota",
-    "@tarquinen/opencode-dcp",
-    "oh-my-opencode-slim"
+  "plugins": [
+    "@slkiser/opencode-quota@6.3.0",
+    "@tarquinen/opencode-dcp@3.2.0",
+    "oh-my-opencode-slim@3.0.7",
+    "-opencode.provider.github.copilot"
+  ],
+  "policies": [
+    {
+      "action": "provider.use",
+      "resource": "github-copilot*",
+      "effect": "deny"
+    }
   ],
   "$schema": "https://opencode.ai/config.json",
   "experimental": {
@@ -36,5 +44,21 @@
       "disable": true
     }
   },
-  "lsp": true
+  "permission": {
+    "external_directory": "ask"
+  },
+  "lsp": true,
+  "mcp": {
+    "servers": {
+      "firefox": {
+        "type": "local",
+        "command": [
+          "npx",
+          "-y",
+          "@mozilla/firefox-devtools-mcp@latest",
+          "--connect-existing"
+        ]
+      }
+    }
+  }
 }

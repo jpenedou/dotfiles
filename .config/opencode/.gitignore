@@ -1,7 +1,0 @@
-node_modules
-opencode-quota
-*.backup*
-*.bak
-package.json
-package-lock.json
-bun.lock
